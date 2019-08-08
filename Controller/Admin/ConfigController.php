@@ -27,7 +27,7 @@ class ConfigController extends AbstractController
     }
 
     /**
-     * @Route("/%eccube_admin_route%/ghtk/config", name="ghtk_admin_config")
+     * @Route("/%eccube_admin_route%/ghtk/config", name="ghtk_delivery_admin_config")
      * @Template("@GHTKDelivery/admin/config.twig")
      */
     public function index(Request $request)
@@ -42,7 +42,7 @@ class ConfigController extends AbstractController
             $this->entityManager->flush($Config);
             $this->addSuccess('admin.common.save_complete', 'admin');
 
-            return $this->redirectToRoute('ghtk_admin_config');
+            return $this->redirectToRoute('ghtk_delivery_admin_config');
         }
 
         return [
