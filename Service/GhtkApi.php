@@ -1,9 +1,9 @@
 <?php 
 
-namespace Plugin\GHTKDelivery\Service;
+namespace Plugin\OSGHTKDelivery\Service;
 
 use GuzzleHttp\Client;
-use Plugin\GHTKDelivery\Repository\ConfigRepository;
+use Plugin\OSGHTKDelivery\Repository\ConfigRepository;
 
 class GhtkApi {
     

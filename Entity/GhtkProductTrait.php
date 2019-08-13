@@ -1,13 +1,13 @@
 <?php 
 
-namespace Plugin\GHTKDelivery\Entity;
+namespace Plugin\OSGHTKDelivery\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Eccube\Annotation as Eccube;
 
 /**
  * Trait GhtkProductTrait
- * @package Plugin\GHTKDelivery\Entity
+ * @package Plugin\OSGHTKDelivery\Entity
  *
  * @Eccube\EntityExtension("Eccube\Entity\Product")
  */

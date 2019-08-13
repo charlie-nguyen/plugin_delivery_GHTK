@@ -1,6 +1,6 @@
 <?php
 
-namespace Plugin\GHTKDelivery\Entity;
+namespace Plugin\OSGHTKDelivery\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Config
  *
  * @ORM\Table(name="plg_ghtk_config")
- * @ORM\Entity(repositoryClass="Plugin\GHTKDelivery\Repository\ConfigRepository")
+ * @ORM\Entity(repositoryClass="Plugin\OSGHTKDelivery\Repository\ConfigRepository")
  */
 class Config
 {

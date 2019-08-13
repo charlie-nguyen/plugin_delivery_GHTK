@@ -1,6 +1,6 @@
 <?php
 
-namespace Plugin\GHTKDelivery;
+namespace Plugin\OSGHTKDelivery;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Eccube\Event\EccubeEvents;
@@ -12,9 +12,9 @@ use GuzzleHttp\Client;
 use Eccube\Entity\BaseInfo;
 use Eccube\Event\EventArgs;
 use Eccube\Repository\BaseInfoRepository;
-use Plugin\GHTKDelivery\Service\PurchaseFlow\GHTKPreprocessor;
-use Plugin\GHTKDelivery\Repository\ConfigRepository;
-use Plugin\GHTKDelivery\Service\GhtkApi;
+use Plugin\OSGHTKDelivery\Service\PurchaseFlow\GHTKPreprocessor;
+use Plugin\OSGHTKDelivery\Repository\ConfigRepository;
+use Plugin\OSGHTKDelivery\Service\GhtkApi;
 use Eccube\Repository\Master\PrefRepository;
 use Doctrine\ORM\EntityManager;
 use Eccube\Repository\Master\OrderStatusRepository;
@@ -126,7 +126,7 @@ class Event implements EventSubscriberInterface
      */
     public function productEditView(TemplateEvent $event)
     {
-        $event->addSnippet('@GHTKDelivery/admin/product_edit.twig');
+        $event->addSnippet('@OSGHTKDelivery/admin/product_edit.twig');
     }
 
     /**
@@ -140,7 +140,7 @@ class Event implements EventSubscriberInterface
         $parameters = $event->getParameters();
         $deliveryId = $parameters['delivery_id'];
         if ( $deliveryId == $config->getDeliveryId() ) {
-            $event->addSnippet('@GHTKDelivery/admin/delivery_edit.twig');
+            $event->addSnippet('@OSGHTKDelivery/admin/delivery_edit.twig');
         }
     }
 
@@ -163,7 +163,7 @@ class Event implements EventSubscriberInterface
         }
         if((empty($this->baseInfo->getPref()) || empty($this->baseInfo->getAddr01()) ) && ($isExistGHTK == true) ){
             $event->setParameter('message', trans('ghtk.event.error_shopping_edit', ['%shopname%' => $shopname]));
-            $event->addSnippet('@GHTKDelivery/shopping/shopping_edit.twig' );
+            $event->addSnippet('@OSGHTKDelivery/shopping/shopping_edit.twig' );
         }
     }
 
@@ -257,7 +257,7 @@ class Event implements EventSubscriberInterface
                         $shipping->setGhtkStatus($ghtkStatus->order->status_text);
                         $event->setParameters($parameters);
                     }
-                    $event->addSnippet('@GHTKDelivery/admin/order_edit.twig');
+                    $event->addSnippet('@OSGHTKDelivery/admin/order_edit.twig');
                 }
             }
         }

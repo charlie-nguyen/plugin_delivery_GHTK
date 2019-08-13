@@ -1,10 +1,10 @@
 <?php
 
-namespace Plugin\GHTKDelivery\Controller\Admin;
+namespace Plugin\OSGHTKDelivery\Controller\Admin;
 
 use Eccube\Controller\AbstractController;
-use Plugin\GHTKDelivery\Form\Type\Admin\ConfigType;
-use Plugin\GHTKDelivery\Repository\ConfigRepository;
+use Plugin\OSGHTKDelivery\Form\Type\Admin\ConfigType;
+use Plugin\OSGHTKDelivery\Repository\ConfigRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -27,8 +27,8 @@ class ConfigController extends AbstractController
     }
 
     /**
-     * @Route("/%eccube_admin_route%/ghtk/config", name="ghtk_admin_config")
-     * @Template("@GHTKDelivery/admin/config.twig")
+     * @Route("/%eccube_admin_route%/ghtk/config", name="osghtk_delivery_admin_config")
+     * @Template("@OSGHTKDelivery/admin/config.twig")
      */
     public function index(Request $request)
     {
@@ -42,7 +42,7 @@ class ConfigController extends AbstractController
             $this->entityManager->flush($Config);
             $this->addSuccess('admin.common.save_complete', 'admin');
 
-            return $this->redirectToRoute('ghtk_admin_config');
+            return $this->redirectToRoute('osghtk_delivery_admin_config');
         }
 
         return [

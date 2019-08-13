@@ -1,11 +1,11 @@
 <?php
-namespace Plugin\GHTKDelivery\Service\PurchaseFlow;
+namespace Plugin\OSGHTKDelivery\Service\PurchaseFlow;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Eccube\Annotation\ShoppingFlow;
 use Eccube\Entity\ItemHolderInterface;
 use Eccube\Entity\Order;
-use Plugin\GHTKDelivery\Repository\ConfigRepository;
+use Plugin\OSGHTKDelivery\Repository\ConfigRepository;
 use Eccube\Entity\OrderItem;
 use Eccube\Entity\Master\Pref;
 use Eccube\Service\PurchaseFlow\ItemHolderPreprocessor;
@@ -15,12 +15,12 @@ use Eccube\Repository\BaseInfoRepository;
 use Eccube\Entity\Master\OrderItemType;
 use Eccube\Entity\Master\TaxDisplayType;
 use Eccube\Entity\Master\TaxType;
-use Plugin\GHTKDelivery\Service\GhtkApi;
+use Plugin\OSGHTKDelivery\Service\GhtkApi;
 use Eccube\Repository\Master\PrefRepository;
 use Symfony\Component\HttpFoundation\Session\Session;
 /**
  * Class GHTKPreprocessor
- * @package Plugin\GHTKDelivery\Service\PurchaseFlow
+ * @package Plugin\OSGHTKDelivery\Service\PurchaseFlow
  *
  * @ShoppingFlow()
  */
