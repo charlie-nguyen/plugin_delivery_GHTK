@@ -1,15 +1,15 @@
 <?php 
 
-namespace Plugin\GHTKDelivery;
+namespace Plugin\OSGHTKDelivery;
 
 use Eccube\Plugin\AbstractPluginManager;
-use Plugin\GHTKDelivery\Entity\Config;
+use Plugin\OSGHTKDelivery\Entity\Config;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Eccube\Repository\DeliveryRepository;
 use Eccube\Repository\DeliveryFeeRepository;
 use Eccube\Repository\PaymentRepository;
 use Eccube\Repository\PaymentOptionRepository;
-use Plugin\GHTKDelivery\Repository\ConfigRepository;
+use Plugin\OSGHTKDelivery\Repository\ConfigRepository;
 use Eccube\Repository\Master\SaleTypeRepository;
 use Eccube\Repository\Master\PrefRepository;
 use Eccube\Entity\Delivery;

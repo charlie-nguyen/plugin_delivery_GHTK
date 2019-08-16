@@ -1,8 +1,8 @@
 <?php
 
-namespace Plugin\GHTKDelivery\Form\Type\Admin;
+namespace Plugin\OSGHTKDelivery\Form\Type\Admin;
 
-use Plugin\GHTKDelivery\Entity\Config;
+use Plugin\OSGHTKDelivery\Entity\Config;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;

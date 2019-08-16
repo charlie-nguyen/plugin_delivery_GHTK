@@ -1,10 +1,10 @@
 <?php
 
-namespace Plugin\GHTKDelivery\Controller\Admin;
+namespace Plugin\OSGHTKDelivery\Controller\Admin;
 
 use Eccube\Controller\AbstractController;
-use Plugin\GHTKDelivery\Service\GhtkApi as DeliveryService;
-use Plugin\GHTKDelivery\Repository\ConfigRepository;
+use Plugin\OSGHTKDelivery\Service\GhtkApi as DeliveryService;
+use Plugin\OSGHTKDelivery\Repository\ConfigRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
@@ -52,7 +52,7 @@ class GHTKController extends AbstractController
         header('Expires: 0');
         header('Cache-Control: must-revalidate');
         header('Pragma: public');
-        header('Content-Length: ' . strlen($content));    
+        header('Content-Length: ' . strlen($content));
         echo $content;
     }
 

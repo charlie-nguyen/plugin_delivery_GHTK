@@ -1,9 +1,9 @@
 <?php
 
-namespace Plugin\GHTKDelivery\Repository;
+namespace Plugin\OSGHTKDelivery\Repository;
 
 use Eccube\Repository\AbstractRepository;
-use Plugin\GHTKDelivery\Entity\Config;
+use Plugin\OSGHTKDelivery\Entity\Config;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 /**
