@@ -1,5 +1,5 @@
-ghtk.admin.order.print_invoice: "In đơn hàng GHTK"
-admin.product.weight: "Khối lượng (g)"
+ghtk.admin.order.print_invoice: In đơn hàng GHTK
+admin.product.weight: Khối lượng (g)
 
 ghtk.name: Giao hàng tiet kiem
 ghtk.header: Cài đặt
